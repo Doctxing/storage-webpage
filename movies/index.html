@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctxing || Source Storage</title>
+    <link href="/static/image/avartar.png" rel="icon">
+    <!--- Bootstrap --->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!--- Custom CSS --->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!--- Font-awesome --->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--- Jquery --->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--- Bootstrap-select --->
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+    <!--- VUE --->
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.0.5/vue.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="%%%%%%%%%%%%%%%%%%%%%%">Doctxing Source Storage</a></div>
+                                           <!--- 这里加入链接 --->
+    </div>
+</div>
+<div id="mirrors">
+    <div class="spacing hidden-xs"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 table-responsive" id="mirror-list">
+                <div>
+                    <div class="col-md-8 col-xs-12 vbottom">
+                        <h3>
+                            <em class="fa fa-cube"></em>
+                            Index of <span id="path">/root/movies</span></h3>
+                    </div>
+                </div>
+                <table id="list">
+                    <thead>
+                    <tr>
+                        <th style="width:55%">
+                            <a>File Name</a>&nbsp;
+                        </th>
+                        <th style="width:20%">
+                            <a>File Size</a>&nbsp;
+                        </th>
+                        <th style="width:25%">
+                            <a>Date</a>&nbsp;
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="link">
+                            <a href="../index1.html">Parent directory/</a>
+                        </td>
+                        <td class="size">-</td>
+                        <td class="date">-</td>
+                    </tr>
+                    <tr>
+                        <td class="link">
+                            <a href="./pictures/index.html" title="pictures">something/</a>
+                        </td>
+                        <td class="size">-</td>
+                        <td class="date">25 Jul 2023 02:25:31 +0000</td>
+                    </tr>
+                    <tr>
+                        <td class="link">
+                            <a href="###################" title="#m">something/</a>
+                        </td>
+                        <td class="size">-</td>
+                        <td class="date">25 Jul 2023 02:25:31 +0000</td>
+                    </tr>
+                    <tr>
+                        <td class="link">
+                            <a href="###################" title="#">something/</a>
+                        </td>
+                        <td class="size">-</td>
+                        <td class="date">25 Jul 2024 03:25:31 +0000</td>
+                    </tr>
+                    <tr>
+                        <td class="link">
+                            <a href="###################" title="#">something/</a>
+                        </td>
+                        <td class="size">-</td>
+                        <td class="date">25 Jul 2023 02:25:31 +0000</td>
+                    </tr>
+                    <tr>
+                        <td class="link">
+                            <a href="###################" title="#">something/</a>
+                        </td>
+                        <td class="size">-</td>
+                        <td class="date">25 Jul 2023 02:25:31 +0000</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    document.getElementById("list").setAttribute("class", "table"), $(function () {
+    $("#list tbody tr td:nth-child(3)").each(function (t, e) {
+        var s = new Date($(e).text());
+        if (!isNaN(s.getTime())) {
+            var u = ("000" + s.getFullYear()).substr(-4) + "-" + ("0" + (s.getMonth() + 1)).substr(-2) + "-" + ("0" + s.getDate()).substr(-2) + " " + ("0" + s.getHours()).substr(-2) + ":" + ("0" + s.getMinutes()).substr(-2);
+            $(e).text(u)
+        }
+    })
+});
+</script>
+<style>#list tbody td, #path {
+    font-family: 'Fira Code Retina', 'Fira Code', 'Fira Mono', 'JetBrains Mono', 'Source Code Pro', 'Consolas', 'Menlo', 'Monaco', monospace
+}</style>
+</html>
