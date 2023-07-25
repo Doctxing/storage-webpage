@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctxing || Source Storage</title>
+    <link href="/static/image/avartar.png" rel="icon">
+    <!--- Bootstrap --->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!--- Custom CSS --->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!--- Font-awesome --->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--- Jquery --->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--- Bootstrap-select --->
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+    <!--- VUE --->
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.0.5/vue.min.js"></script>
 </head>
 <body>
-
+<div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://doctxing.github.io">Doctxing Source Storage</a></div>
+    </div>
+</div>
+<div class="container">
+    <div id="join-tuna" class="col-md-12">
+        <h1> # Doctxing的文件库 || source storage</h1>
+        <br>
+        <h2>中文简体</h2>
+        <h3>原网站已改迁</h3>
+        <p>现博客网址为
+            <a href="https://doctxing.gitee.io">doctxing.gitee.io</a>，请谅解因改迁带来的不便</p>
+        <h3>这里是文件库所以</h3>
+        <p>开始使用：<a href="./index1.html">root/</a></p>
+        <br>
+        <h2>English</h2>
+        <h3>The original website has been moved</h3>
+        <p>The current blog URL is
+            <a href="https://doctxing.gitee.io">doctxing.gitee.io</a>,please understand the inconvenience caused by the relocation</p>
+        <h3>This is the file library, so</h3>
+        <p>To get started:<a href="./index1.html">root/</a>
+    </div>
+</div>
 </body>
+<script>
+    document.getElementById("list").setAttribute("class", "table"), $(function () {
+    $("#list tbody tr td:nth-child(3)").each(function (t, e) {
+        var s = new Date($(e).text());
+        if (!isNaN(s.getTime())) {
+            var u = ("000" + s.getFullYear()).substr(-4) + "-" + ("0" + (s.getMonth() + 1)).substr(-2) + "-" + ("0" + s.getDate()).substr(-2) + " " + ("0" + s.getHours()).substr(-2) + ":" + ("0" + s.getMinutes()).substr(-2);
+            $(e).text(u)
+        }
+    })
+});
+</script>
+<style>#list tbody td, #path {
+    font-family: 'Fira Code Retina', 'Fira Code', 'Fira Mono', 'JetBrains Mono', 'Source Code Pro', 'Consolas', 'Menlo', 'Monaco', monospace
+}</style>
 </html>
